@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Enter sentence for sentiment analysis</h1>
+		<form action = "{{url_for('predict')}}"method="post">
+			<input type = "text"name="sentence" />
+			<button type="submit">Check</button>
+		</form>
+		<br><br>
+		{% if sentence == 1 %}
+			<h1> &#128516;</h1>
+		{% elif sentence == 0 %}
+			<h1> &#128546;</h1>
+		{% endif %}
+	</body>
+</html>
